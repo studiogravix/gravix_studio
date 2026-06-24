@@ -1,0 +1,293 @@
+---
+import "../css/style.css";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contacto - Studio Gravix</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				<div class="logo">
+					<div class="logo-icon">◇</div>
+					<span>Studio Gravix</span>
+				</div>
+				<ul class="nav-links">
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/servicios">Servicios</a></li>
+					<li><a href="/contacto">Contacto</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="contact-section">
+			<div class="contact-container">
+				<div class="contact-info">
+					<div class="hero-badge">Hablemos de tu proyecto</div>
+					<h1>Ponte en contacto con nosotros</h1>
+					<p>
+						¿Tienes una idea en mente o necesitas una cotización?
+						Escríbenos por cualquiera de nuestros medios y te
+						responderemos lo antes posible.
+					</p>
+
+					<div class="contact-methods">
+						<a
+							href="mailto:studiogravix26@gmail.com"
+							class="contact-card"
+						>
+							<div class="card-icon">✉</div>
+							<div class="card-details">
+								<h3>Correo Electrónico</h3>
+								<p>studiogravix26@gmail.com</p>
+								<span class="action-link">Enviar correo →</span>
+							</div>
+						</a>
+
+						<a
+							href="https://wa.me/529991372072"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="contact-card"
+						>
+							<div class="card-icon">💬</div>
+							<div class="card-details">
+								<h3>WhatsApp / Teléfono</h3>
+								<p>9991372072</p>
+								<span class="action-link">Iniciar chat →</span>
+							</div>
+						</a>
+
+						<a
+							href="https://www.instagram.com/studio_gravix/"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="contact-card"
+						>
+							<div class="card-icon">📸</div>
+							<div class="card-details">
+								<h3>Instagram</h3>
+								<p>@studio_gravix</p>
+								<span class="action-link"
+									>Seguir en Instagram →</span
+								>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="contact-form-container">
+					<h2>Envíanos un mensaje</h2>
+					<form
+						class="contact-form"
+						id="whatsappForm"
+					>
+						<div class="form-group">
+							<label for="name">Nombre</label>
+							<input
+								type="text"
+								id="name"
+								required
+								placeholder="Tu nombre"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="email">Correo Electrónico</label>
+							<input
+								type="email"
+								id="email"
+								required
+								placeholder="tu@correo.com"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="message">Mensaje</label>
+							<textarea
+								id="message"
+								rows="5"
+								required
+								placeholder="Cuéntanos sobre tu idea o proyecto..."
+							></textarea>
+						</div>
+						<button type="submit" class="btn-primary"
+							>Enviar a WhatsApp 💬</button
+						>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="footer-links">
+				<a href="/privacidad">Aviso de Privacidad</a>
+				<a href="/terminos">Términos y Condiciones</a>
+			</div>
+			<p>© 2026 Studio Gravix. Todos los derechos reservados.</p>
+		</footer>
+
+		<script src="../js/main.js"></script>
+		<script is:inline>
+			document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+				event.preventDefault();
+				const name = document.getElementById('name').value;
+				const email = document.getElementById('email').value;
+				const message = document.getElementById('message').value;
+				
+				const text = `Hola Studio Gravix, me llamo ${name} (${email}). Te escribo para: ${message}`;
+				const whatsappUrl = `https://wa.me/529991372072?text=${encodeURIComponent(text)}`;
+				
+				window.open(whatsappUrl, '_blank');
+			});
+		</script>
+	</body>
+</html>
+
+<style>
+	.contact-section {
+		min-height: 100vh;
+		padding: 8rem 2rem 4rem;
+		max-width: 1200px;
+		margin: auto;
+		display: flex;
+		align-items: center;
+	}
+
+	.contact-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		width: 100%;
+	}
+
+	.contact-info h1 {
+		font-size: 3rem;
+		line-height: 1.2;
+		margin-bottom: 1.5rem;
+	}
+
+	.contact-info p {
+		color: #a1a1aa;
+		margin-bottom: 2.5rem;
+	}
+
+	.contact-methods {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.contact-card {
+		background: #0d0d0d;
+		border: 1px solid #1f1f1f;
+		padding: 1.5rem;
+		border-radius: 16px;
+		display: flex;
+		gap: 1.5rem;
+		align-items: center;
+		transition: all 0.3s ease;
+	}
+
+	.contact-card:hover {
+		transform: translateX(8px);
+		border-color: #444;
+	}
+
+	.card-icon {
+		font-size: 2rem;
+		background: rgba(255, 255, 255, 0.05);
+		width: 50px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 12px;
+	}
+
+	.card-details h3 {
+		font-size: 1.1rem;
+		margin-bottom: 0.2rem;
+	}
+
+	.card-details p {
+		color: #a1a1aa;
+		margin-bottom: 0.5rem;
+		font-size: 0.95rem;
+	}
+
+	.action-link {
+		color: #fff;
+		font-weight: 600;
+		font-size: 0.9rem;
+	}
+
+	.contact-form-container {
+		background: #0d0d0d;
+		border: 1px solid #1f1f1f;
+		padding: 3rem;
+		border-radius: 24px;
+	}
+
+	.contact-form-container h2 {
+		margin-bottom: 2rem;
+		font-size: 2rem;
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.form-group label {
+		font-size: 0.9rem;
+		color: #a1a1aa;
+	}
+
+	.form-group input,
+	.form-group textarea {
+		background: #050505;
+		border: 1px solid #2a2a2a;
+		padding: 0.8rem 1rem;
+		border-radius: 8px;
+		color: #fff;
+		font-family: inherit;
+		outline: none;
+		transition: border-color 0.2s ease;
+	}
+
+	.form-group input:focus,
+	.form-group textarea:focus {
+		border-color: #555;
+	}
+
+	.contact-form button {
+		cursor: pointer;
+		border: none;
+		font-size: 1rem;
+	}
+
+	@media (max-width: 968px) {
+		.contact-container {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+
+		.contact-info h1 {
+			font-size: 2.5rem;
+		}
+	}
+</style>

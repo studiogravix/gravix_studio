@@ -1,0 +1,224 @@
+---
+import "../css/style.css";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Servicios - Studio Gravix</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				<div class="logo">
+					<div class="logo-icon">◇</div>
+					<span>Studio Gravix</span>
+				</div>
+				<ul class="nav-links">
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/servicios">Servicios</a></li>
+					<li><a href="/contacto">Contacto</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="services-section">
+			<div class="services-header">
+				<div class="hero-badge">Nuestra Especialidad</div>
+				<h1>Soluciones digitales a la medida de tu negocio</h1>
+				<p>Diseñamos y desarrollamos productos web y móviles de alto rendimiento que impulsan el crecimiento de tu marca.</p>
+			</div>
+
+			<div class="services-detailed">
+				<div class="service-detail-card reveal">
+					<div class="service-meta">
+						<span class="service-number">01</span>
+						<h2>Desarrollo Web</h2>
+					</div>
+					<div class="service-desc">
+						<p>Creamos sitios web rápidos, responsivos y optimizados para SEO. Desde landing pages hasta plataformas complejas de comercio electrónico.</p>
+						<ul class="service-features">
+							<li>➢ Landing Pages de alta conversión</li>
+							<li>➢ Sitios Corporativos modernos</li>
+							<li>➢ E-Commerce (Tiendas en línea)</li>
+							<li>➢ Sistemas de Gestión y CMS</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="service-detail-card reveal">
+					<div class="service-meta">
+						<span class="service-number">02</span>
+						<h2>Aplicaciones Móviles</h2>
+					</div>
+					<div class="service-desc">
+						<p>Desarrollamos aplicaciones Android nativas y multiplataforma robustas, con interfaces intuitivas y un rendimiento excepcional.</p>
+						<ul class="service-features">
+							<li>➢ Aplicaciones Android personalizadas</li>
+							<li>➢ Diseño de Interfaces (UI/UX) móviles</li>
+							<li>➢ Integración con APIs y Bases de Datos</li>
+							<li>➢ Publicación en Google Play Store</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="service-detail-card reveal">
+					<div class="service-meta">
+						<span class="service-number">03</span>
+						<h2>Soluciones Personalizadas</h2>
+					</div>
+					<div class="service-desc">
+						<p>Automatizamos tus procesos de negocio y creamos software a la medida que resuelve tus necesidades específicas.</p>
+						<ul class="service-features">
+							<li>➢ Automatización de procesos</li>
+							<li>➢ Bases de datos y Backend seguro</li>
+							<li>➢ Paneles de administración internos</li>
+							<li>➢ Soporte y mantenimiento continuo</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="services-cta">
+				<h2>¿Listo para empezar a crear?</h2>
+				<p>Hablemos sobre tu proyecto y creemos una solución a tu medida.</p>
+				<a href="/contacto" class="btn-primary">Cotizar Proyecto</a>
+			</div>
+		</section>
+
+		<footer>
+			<div class="footer-links">
+				<a href="/privacidad">Aviso de Privacidad</a>
+				<a href="/terminos">Términos y Condiciones</a>
+			</div>
+			<p>© 2026 Studio Gravix. Todos los derechos reservados.</p>
+		</footer>
+
+		<script src="../js/main.js"></script>
+	</body>
+</html>
+
+<style>
+	.services-section {
+		min-height: 100vh;
+		padding: 8rem 2rem 4rem;
+		max-width: 1000px;
+		margin: auto;
+	}
+
+	.services-header {
+		text-align: center;
+		margin-bottom: 5rem;
+	}
+
+	.services-header h1 {
+		font-size: 3rem;
+		line-height: 1.2;
+		margin-bottom: 1.5rem;
+		margin-top: 1rem;
+	}
+
+	.services-header p {
+		color: #a1a1aa;
+		font-size: 1.1rem;
+		max-width: 700px;
+		margin: auto;
+	}
+
+	.services-detailed {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		margin-bottom: 6rem;
+	}
+
+	.service-detail-card {
+		background: #0d0d0d;
+		border: 1px solid #1f1f1f;
+		padding: 3rem;
+		border-radius: 24px;
+		display: grid;
+		grid-template-columns: 1fr 1.5fr;
+		gap: 2rem;
+		transition: border-color 0.3s ease, transform 0.3s ease;
+	}
+
+	.service-detail-card:hover {
+		border-color: #444;
+		transform: translateY(-4px);
+	}
+
+	.service-meta {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.service-number {
+		font-size: 3rem;
+		font-weight: 800;
+		color: rgba(255, 255, 255, 0.1);
+		line-height: 1;
+	}
+
+	.service-meta h2 {
+		font-size: 2rem;
+	}
+
+	.service-desc p {
+		color: #a1a1aa;
+		font-size: 1.1rem;
+		margin-bottom: 2rem;
+	}
+
+	.service-features {
+		list-style: none;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+
+	.service-features li {
+		color: #d4d4d8;
+		font-size: 0.95rem;
+	}
+
+	.services-cta {
+		text-align: center;
+		background: linear-gradient(180deg, #0d0d0d 0%, #050505 100%);
+		border: 1px solid #1f1f1f;
+		padding: 4rem 2rem;
+		border-radius: 24px;
+	}
+
+	.services-cta h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.services-cta p {
+		color: #a1a1aa;
+		margin-bottom: 2rem;
+	}
+
+	@media (max-width: 768px) {
+		.service-detail-card {
+			grid-template-columns: 1fr;
+			padding: 2rem;
+		}
+
+		.service-features {
+			grid-template-columns: 1fr;
+		}
+
+		.services-header h1 {
+			font-size: 2.2rem;
+		}
+	}
+</style>
